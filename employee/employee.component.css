@@ -1,0 +1,27 @@
+.panel-heading{text-align: center;}
+.row.justify-content-center{
+    margin:0 25%;
+    
+}
+label{padding: 5px;}
+.panel-footer{
+     text-align: center;}
+     
+.form-control{width: 40%; margin-left: 4%;}
+
+.btn.btn-danger{ width: 80%; height: 75px; }
+.error{color: red; 
+    box-sizing: border-box;
+    margin: 10px;   
+    margin-left: 25px;
+    }
+    .Gender{margin-left: 7%;margin-top: 9px;}
+
+.form-group1{display: flex; margin: 5px; padding: 5px;}
+
+.favI{margin-left: 2%; margin-top: 9px;}
+#ageP{margin-left: 8%}
+#listEdu{ margin: 0; padding: 6px;
+    margin-bottom: 10px;}
+
+   

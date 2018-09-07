@@ -1,0 +1,57 @@
+<html>
+<script src="Script.js"></script>
+<form #employeeForm="ngForm" (ngSubmit)="Validate(employeeForm)">
+<!-- Head of the html -->
+  <div class="row justify-content-center">
+    <div class="col-lg-12">
+      <div class="panel panel-default" id="mainDiv">
+        <div class="panel-heading">
+          <h1 class="panel-title"> Please Input Your Information </h1>
+        </div>
+        <!--Body of the html wiht inpit Fields -->
+        <body> 
+        <div class="panel-body">
+          <div class="form-group1">
+            <label for="fullName">Name:</label>
+            <input type="text" name="FullName" [(ngModel)]=fullName class="form-control" id="fullName" />
+            <div class="error" id="error1">{{erMsg1}}</div>
+          </div>
+          <div class="form-group1">
+            <label>Sex:</label>
+            <input type="radio" class="Gender" name="Sex" id="rMale" value="Male" [(ngModel)]=rad /><label for="rMale">Male</label>
+            <input type="radio" class="Gender" name="Sex" id="rFemale" value="Female" [(ngModel)]=rad /><label for="rFemale">Female</label>
+          </div>
+          <div class="form-group1">
+            <label>Favorite:</label>
+            <input type="checkbox" id="rSing" name="Sing" class="favI" value="Sing" [(ngModel)]=fav1/><label for="rSing">Sing</label>
+            <input type="checkbox" id="rDance" name="Dance" class="favI" value="Dance" [(ngModel)]=fav2 /><label for="rDance">Dance</label>
+            <input type="checkbox" id="rDraw" name="Draw" class="favI" value="Draw" [(ngModel)]=fav3 /><label for="rDraw">Draws</label>
+          </div>
+          <div class="form-group1">
+            <label for="ageP">Age:</label>
+            <select id="ageP" name="Age" [(ngModel)]=Age class="form-control">
+              <option *ngFor="let age of age" [value]="age.id">{{age.name}}</option>
+            </select>
+          </div>
+          <div class="form-group1">
+            <label id="lel" for="listEdu">Education:</label>
+            <select id="listEdu" class="form-control" name="Department" [(ngModel)]=Department>
+                <option *ngFor="let edu of Educations" [value]="edu.id">{{edu.name}}</option>
+            </select>
+          </div>
+          <div class="form-group1">
+            <label for="mailF">E-mail:</label>
+            <input type="email" class="form-control" id="Email" name="Email" [(ngModel)]=Email />
+            <div class="error" id="error2">{{erMsg2}}</div>
+          </div>
+        </div>
+      </body>
+<!-- footer With Button -->
+        <div class="panel-footer">
+          <button type="submit" class="btn btn-danger">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</html>
